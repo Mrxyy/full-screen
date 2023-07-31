@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "全屏",
+  "version": "1.0",
+  "description": "Helps websites to register Service Worker.",
+  "permissions": [
+    "tabs",
+    "notifications",
+    "scripting",
+    "activeTab",
+    "declarativeNetRequest"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [ "contentScript.js" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "host_permissions": [
+    "https://www.notion.so/*",
+    "<all_urls>"
+  ]
+}
